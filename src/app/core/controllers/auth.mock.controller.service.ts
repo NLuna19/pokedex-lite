@@ -12,10 +12,10 @@ export class AuthControllerService implements IAuthService {
     auth(body:login): Observable<user> {
         let user: user = {};
         if (body.username == 'trainer' && body.password == 'password') {
-             user = { userId: 1, username: 'trainer' }
+            user = { userId: 1, username: 'trainer' }
         }
         if (body.username == 'master' && body.password == 'password') {
-            user = { userId: 1, username: 'trainer' }
+            user = { userId: 2, username: 'master' }
         }
         return of(
             user

@@ -8,15 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public auth:AuthControllerService) { }
-
   ngOnInit() {
-    console.log('home');
-    
-    this.auth.auth({username: 'trainer',password: 'password'})
-    .subscribe(
-      resp => console.log('response:' ,resp)      
-    )
 
   }
 
