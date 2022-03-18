@@ -1,9 +1,11 @@
+import { LoginComponent } from './pages/login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicComponent } from './public.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { PublicRoutingModule } from './public-routing.module';
 
+const components = [ PublicComponent, LoginComponent ]
 @NgModule({
   providers: [],
   imports: [
@@ -11,7 +13,7 @@ import { PublicRoutingModule } from './public-routing.module';
     PublicRoutingModule, 
     SharedModule
   ],
-  exports:[ SharedModule ],
-  declarations: [ PublicComponent ]
+  exports:[ ],
+  declarations: [ ...components  ]
 })
 export class PublicModule { }
