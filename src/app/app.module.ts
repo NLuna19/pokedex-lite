@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './features/app-routing.module';
 import { AppComponent } from './app.component';
-import { FeaturesModule } from './features/features.module'
+import { FeaturesModule } from './features/features.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
-const modules = [ FeaturesModule ];
-const components = [  ];
+const modules = [ FeaturesModule, CoreModule, SharedModule ];
+// const components = [ ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // ...components
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     ...modules
   ],
   providers: [ BrowserAnimationsModule ],
