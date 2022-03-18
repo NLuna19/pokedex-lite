@@ -8,16 +8,15 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-
   {
     path: '',
     loadChildren: () => import('./public/public.module').then((m) => m.PublicModule),
-  }
+  },
 
 ];
 
 @NgModule({
-  imports: [ CommonModule, RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  declarations: [],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
 })
 export class AppRoutingModule { }

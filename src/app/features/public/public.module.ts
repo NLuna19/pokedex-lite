@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicComponent } from './public.component';
 import { SharedModule } from '@app/shared/shared.module';
-
-const modules = [];
-const components = [];
+import { PublicRoutingModule } from './public-routing.module';
 
 @NgModule({
+  providers: [],
   imports: [
-    CommonModule,
-    SharedModule,
+    CommonModule, 
+    PublicRoutingModule, 
+    SharedModule
   ],
-  exports:[],
-  declarations: [PublicComponent]
+  exports:[ SharedModule ],
+  declarations: [ PublicComponent ]
 })
 export class PublicModule { }

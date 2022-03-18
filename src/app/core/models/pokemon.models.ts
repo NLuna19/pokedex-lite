@@ -9,7 +9,7 @@ export interface Pokemon {
     evolutionId: number,
     abilities: Pokemon_abilities[],
     type: string[],
-    image: "string",
+    image: string,
 }
 
 export interface Pokemon_abilities {

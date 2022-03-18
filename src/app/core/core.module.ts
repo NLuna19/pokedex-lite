@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { AuthService } from './services/auth.service';
-import { HttpService } from './services/http.service';
-import { PokemonService } from './services/pokemon.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from '@core/services/http.service';
 
-const service = [ AuthService, HttpService, PokemonService ]
-const modules = [];
-const components = [];
+const providers = [ HttpService ];
+const modules = [ HttpClientModule ];
+const components: never[] = [];
 
 @NgModule({
-  providers: [...service],
+  providers: [ ...providers],
   imports: [
     CommonModule,
     RouterModule,
+    ...modules
   ],
-  exports: [
-
-  ],
-  declarations: [
-
-  ]
+  exports: [ ...components ],
+  declarations: [ ...components ]
 })
 export class CoreModule { }

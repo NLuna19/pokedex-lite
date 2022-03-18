@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class HttpService {
 
     constructor(private http: HttpClient) { }
@@ -10,7 +12,7 @@ export class HttpService {
     router(url: string, id?: number) {
         let route = url;
         if (id) {
-          route = `${url}/${id}`;
+          route = url+"/"+id;
         }
         return route;
     }
