@@ -7,8 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { HomeComponent } from '@features/public/pages/home/home.component';
+import { TitleComponent } from '../components/title/title.component';
 
-const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent ];
+const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent, TitleComponent ];
 const modules = [ CommonModule, PublicRoutingModule, ReactiveFormsModule, SharedModule ];
 
 @NgModule({
