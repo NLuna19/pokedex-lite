@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import '__custom';
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.public{
+    margin: 0 auto;
+    margin-top: 3vh;
+    padding: 16px 4vw !important;
+    width: 80vw;
+    min-height: 50vh;
+}
