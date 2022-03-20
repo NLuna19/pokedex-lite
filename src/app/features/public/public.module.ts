@@ -8,8 +8,9 @@ import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.compone
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { HomeComponent } from '@features/public/pages/home/home.component';
 import { TitleComponent } from '../components/title/title.component';
+import { InlinePokemonInfoComponent } from '@features/components/inline-pokemon-info/inline-pokemon-info.component'
 
-const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent, TitleComponent ];
+const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent, TitleComponent, InlinePokemonInfoComponent ];
 const modules = [ CommonModule, PublicRoutingModule, ReactiveFormsModule, SharedModule ];
 
 @NgModule({
