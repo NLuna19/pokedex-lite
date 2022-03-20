@@ -1,0 +1,9 @@
+<mat-card class="card-pokedex">
+
+    <app-title></app-title>
+
+    <mat-card-content>
+        <inline-pokemon-info [data]="items" (selectPokemon)="select($event)"></inline-pokemon-info>
+    </mat-card-content>
+
+</mat-card>

@@ -6,17 +6,17 @@ import { SharedModule } from '../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from '@app/core/core.module';
 
-const modules = [ CoreModule,  AppRoutingModule,  SharedModule]
+const modules = [ CoreModule,  AppRoutingModule,  SharedModule];
+const components = [  ];
 
 @NgModule({
   exports: [ RouterModule ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    ...modules
+    ...modules,
   ],
   declarations: [ 
-
   ]
 })
 export class FeaturesModule { }

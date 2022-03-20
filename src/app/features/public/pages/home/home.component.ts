@@ -20,4 +20,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  pokedex(){
+    this.router.navigate(['/pokedex']);
+  }
+
 }
