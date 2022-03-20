@@ -16,7 +16,8 @@ const modules = [ FeaturesModule, CoreModule, SharedModule ];
   ],
   imports: [
     BrowserModule,
-    ...modules
+    BrowserAnimationsModule,
+    ...modules,
   ],
   providers: [ BrowserAnimationsModule ],
   bootstrap: [ AppComponent ]
