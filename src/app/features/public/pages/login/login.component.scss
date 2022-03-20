@@ -1,13 +1,12 @@
-.input-login, .btn-login{
+.input-login, .btn-login {
     min-width: 100%;
-    margin: 2px 0;
 }
 
-.card-login{
+.card-login {
     display: block;
     
-    &-content{
+    &-content {
         display: block;
-
+        padding-top: 2vh;
     }
 }

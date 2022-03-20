@@ -1,10 +1,11 @@
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { AuthControllerService } from '@core/controllers/auth.controller.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { user } from '@app/core/models/user.models';
+import { getControl as getControlForm} from '@core/util/getControlForm'
 
 @Component({
   selector: 'login',
@@ -18,6 +19,8 @@ export class LoginComponent implements OnInit {
   private usernameFormControl: FormControl = new FormControl( '', [ Validators.required ] );
   private passwordFormControl: FormControl = new FormControl( '', [ Validators.required ] );
   private loginObserver$: Observable<user>;
+
+  public getControl = getControlForm;
 
   constructor( 
     private formBuilder: FormBuilder, 
@@ -53,13 +56,23 @@ export class LoginComponent implements OnInit {
   }
 
   loginSubscribe(){
-    this.loginObserver$.subscribe({
-      next: (response) => { console.log(response); },
-      error: (error:HttpErrorResponse)=> { console.log(error.statusText) },
-      complete: () => { console.log('COMPLETE'); this.router.navigate(['/home']) }
-    })
+    if (this.formLogin.invalid) {
+      
+    }else{
+      this.loginObserver$.subscribe({
+        next: (response) => { console.log(response); },
+        error: (error:HttpErrorResponse)=> { console.log(error.statusText) },
+        complete: () => { console.log('COMPLETE'); this.router.navigate(['/home']) }
+      })
+    }
   }
 
+  controlForm(controlname: string){
+    return this.getControl(this.formLogin, controlname);
+  }
 
+  requiredError(): string{
+    return 'Campo requerido';
+  }
 
 }

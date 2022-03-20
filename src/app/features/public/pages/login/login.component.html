@@ -2,26 +2,31 @@
 
   <mat-card-title>{{title}}</mat-card-title>
   <mat-divider></mat-divider>
+
   <mat-card-content class="card-login-content">
+    <form (ngSubmit)="submit()" [formGroup]="formLogin" >
 
-    <form (ngSubmit)="submit()" [formGroup]="formLogin" class="" >
-
-      <mat-form-field class="input-login">
+      <mat-form-field appearance="outline" class="input-login">
+        <mat-label>Usuario</mat-label>
         <input matInput formControlName="username"
-          placeholder="Username" type="text" id="loginUser" 
-          name="username" class="" 
-      ></mat-form-field>
+          placeholder="- - -" type="text" id="loginUser" 
+          name="username" required
+        />
+        <mat-error *ngIf="controlForm('username')?.invalid">{{requiredError()}}</mat-error>
+      </mat-form-field>
       
-      <mat-form-field class="input-login">
+      <mat-form-field appearance="outline" class="input-login">
+        <mat-label>Contraseña</mat-label>
         <input matInput formControlName="password"
-          placeholder="Password" type="password" id="loginPassword" 
-          name="password" class=""
-      ></mat-form-field>
+          placeholder="- - -" type="password" id="loginPassword" 
+          name="password" required
+        />
+        <mat-error *ngIf="controlForm('username')?.invalid">{{requiredError()}}</mat-error>
+      </mat-form-field>
 
-      <button mat-stroked-button color="accent" type="submit" class="btn-login">Login</button>
+      <button mat-raised-button color="primary" type="submit" class="btn-login">Login</button>
       
     </form>
-
   </mat-card-content>
 
 </mat-card>
