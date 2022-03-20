@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PublicComponent } from './public.component';
+import { PublicComponent } from '@features/public/public.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { PublicRoutingModule } from './public-routing.module';
-import { LoginComponent } from './pages/login/login.component';
-import { HomeComponent } from './pages/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
+import { LoginComponent } from '@features/public/pages/login/login.component';
+import { HomeComponent } from '@features/public/pages/home/home.component';
 
-const components = [ PublicComponent, HomeComponent, LoginComponent ]
+const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent ];
+const modules = [ CommonModule, PublicRoutingModule, ReactiveFormsModule, SharedModule ];
+
 @NgModule({
   providers: [],
-  imports: [
-    CommonModule, 
-    PublicRoutingModule,
-    ReactiveFormsModule, 
-    SharedModule
-  ],
-  exports:[ ],
-  declarations: [ ...components  ]
+  imports: [...modules ],
+  exports:[],
+  declarations: [ ...components ]
 })
 export class PublicModule { }

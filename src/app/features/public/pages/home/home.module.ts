@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '../login/login.component';
+import { HomeComponent } from '@features/public/pages/home/home.component';
+import { LoginComponent } from '@features/public/pages/login/login.component';
+import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
         component: LoginComponent
       },
       {
-        path: 'pokedex'
+        path: 'pokedex',
+        component: PokedexComponent,
       }
     ],
   }
