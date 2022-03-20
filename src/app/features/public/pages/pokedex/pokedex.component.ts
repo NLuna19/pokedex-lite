@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { Pokemon } from '@core/models/pokemon.models';
+import { PokemonControllerService } from '@app/core/controllers/pokemon.controller.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokedexComponent implements OnInit {
 
-  constructor() { }
+  public pokemons$: Observable<Pokemon[]> = new Observable<Pokemon[]>();
+  public items!: Pokemon[];
 
-  ngOnInit(): void {
+  constructor(private pokemonService: PokemonControllerService) {
+    this.pokemons$ = this.pokemonService.getByUserId(1); 
+  }
+
+  ngOnInit(): void {    
+    this.pokemons$.subscribe({
+      next: (resp) => {
+        this.items = resp.filter(x => x!= null)
+      },
+      complete: () => {
+      }
+    })
+  }
+
+  select(id:number){
+    console.log('in pokedex: ', id);
+    
   }
 
 }

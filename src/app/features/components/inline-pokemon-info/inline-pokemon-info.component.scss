@@ -1,24 +1,27 @@
 .grid{
     margin: .5rem 0;
 
-    &-container{
+    &-container {
         display: grid;
         column-gap: 2px;
         grid-template-columns: 40% 40% 20%;
     }
-
 }
-  
+
+.header {
+    margin-top: 2vh;
+}
+
 .grid-item {
     text-align: start;
     align-content: center;
     padding: 0;
 
-    &-header{
+    &-header {
         font-weight: bold;
     }
 }
 
-a{
+a {
     padding: 0;
 }
