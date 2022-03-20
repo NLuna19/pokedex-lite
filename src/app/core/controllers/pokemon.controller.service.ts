@@ -8,12 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class PokemonControllerService {
 
-    private url: string = 'https://testing.certant.com/pokedex-api/pokemon';
+    private url = 'pokedex-api/pokemon';
 
     constructor(private http:HttpService) { }
 
-    getByUserId(id:number): Observable<Pokemon[]>{
-        return this.http.get<Pokemon[]>(this.url, id);
+    getByUserId(userId:number): Observable<Pokemon[]>{
+        const _url = `${this.url}?userId=${userId}`;
+        return this.http.get<Pokemon[]>(_url);
     }
 
 }
