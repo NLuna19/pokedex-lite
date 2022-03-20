@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@app/shared/materials/material.module';
+import { SharedTitleComponent } from './components/title/shared-title.component';
 
 const modules = [ MaterialModule ];
-const components = [];
+const components = [ SharedTitleComponent ];
 
 @NgModule({
   imports: [
@@ -11,9 +12,11 @@ const components = [];
     ...modules
   ],
   exports:[
-    ...modules
+    ...modules,
+    ...components,
   ],
   declarations: [
+    ...components
   ]
 })
 export class SharedModule { }
