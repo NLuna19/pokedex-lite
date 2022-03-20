@@ -6,8 +6,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .public{
     margin: 0 auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     margin-top: 3vh;
-    padding: 16px 4vw !important;
     width: 80vw;
     min-height: 50vh;
 }

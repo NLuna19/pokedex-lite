@@ -1,26 +1,27 @@
-<mat-card>
-  <mat-card-title>Pokedex - Lite</mat-card-title>
-  <mat-card-content>
-    <form id="formLogin" class="" >
-      <h1 class=""></h1>
-      <br>
+<mat-card class="card-login">
 
-      <mat-form-field class="">
-        <input matInput 
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content class="card-login-content">
+
+    <form (ngSubmit)="submit()" [formGroup]="formLogin" class="" >
+
+      <mat-form-field class="input-login">
+        <input matInput formControlName="username"
           placeholder="Username" type="text" id="loginUser" 
-          name="username" class=""
+          name="username" class="" 
       ></mat-form-field>
-      <mat-form-field class="">
-        <input matInput 
+      
+      <mat-form-field class="input-login">
+        <input matInput formControlName="password"
           placeholder="Password" type="password" id="loginPassword" 
           name="password" class=""
       ></mat-form-field>
 
+      <button mat-stroked-button color="accent" type="submit" class="btn-login">Login</button>
+      
     </form>
+
   </mat-card-content>
 
-  <mat-card-actions> 
-    <button mat-stroked-button color="accent" type="submit">Login</button>
-  </mat-card-actions>
-      
 </mat-card>

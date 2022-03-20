@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { FeaturesModule } from './features/features.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { MaterialModule } from '@app/shared/materials/material.module';
 
 const modules = [ FeaturesModule, CoreModule, SharedModule ];
 // const components = [ ];
@@ -17,8 +16,8 @@ const modules = [ FeaturesModule, CoreModule, SharedModule ];
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ...modules,
-    BrowserAnimationsModule
   ],
   providers: [ BrowserAnimationsModule ],
   bootstrap: [ AppComponent ]
