@@ -8,7 +8,7 @@ import { Pokemon_abilities } from '@app/core/models/pokemon.models';
 })
 export class AbilitiesListComponent implements OnInit {
 
-  @Input() abilities!:Pokemon_abilities;
+  @Input() abilities?:Pokemon_abilities[];
 
   constructor() { }
 
