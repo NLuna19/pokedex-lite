@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthControllerService } from '@core/controllers/auth.controller.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { user } from '@app/core/models/user.models';
@@ -59,7 +59,6 @@ export class LoginComponent implements OnInit {
 
   loginSubscribe(){
     if (this.formLogin.invalid) {
-      
     }else{
       this.loginObserver$.subscribe({
         next: (response) => { 

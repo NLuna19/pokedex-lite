@@ -3,7 +3,7 @@
     <span>{{title}}</span>
 
     <button *ngIf="!logged" mat-raised-button color="primary" (click)="login()" >Login</button>
-    <button *ngIf="logged" mat-flat-button color="warn" (click)="logout()" >Logout</button>
+    <button *ngIf="logged" mat-raised-button color="warn" (click)="logout()" >Logout</button>
 
 </mat-toolbar>
 

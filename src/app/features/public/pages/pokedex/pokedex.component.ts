@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pokemon } from '@core/models/pokemon.models';
-import { PokemonControllerService } from '@app/core/controllers/pokemon.controller.service';
 import { AuthStorageService } from '@app/core/services/auth.service';
 import { Store } from '@ngrx/store';
 import { pokemonState } from '@app/core/models/pokemons-state.models';
@@ -45,6 +44,10 @@ export class PokedexComponent implements OnInit {
     console.log('in pokedex: ', pokemon.id);    
     this.store.dispatch(PokemonActions.getOnePokemon({pokemon: pokemon}))
     this.router.navigate(['pokedex/pokemon'])
+  }
+
+  crear(){
+    this.router.navigate(['pokedex/crear'])
   }
 
 }

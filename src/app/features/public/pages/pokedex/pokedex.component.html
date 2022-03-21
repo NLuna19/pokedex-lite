@@ -1,3 +1,11 @@
 <mat-card-content>  
+
     <inline-pokemon-info [data]="items" (selectPokemon)="select($event)"></inline-pokemon-info>
+    
+
+    <mat-card-actions class="actions">
+        <button mat-raised-button color="" routerLink="/home">Volver</button>
+        <button mat-flat-button color="primary" (click)="crear()"> Agregar</button>
+    </mat-card-actions>
+
 </mat-card-content>
