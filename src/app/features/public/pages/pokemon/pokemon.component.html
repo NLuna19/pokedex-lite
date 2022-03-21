@@ -1,5 +1,12 @@
-<mat-card-content>
-    <inline-simple-one [item]="header"> </inline-simple-one>
+<header-info></header-info>
+<inline-simple-one [item]="header"> </inline-simple-one>
+
+<mat-card-content class="pokemon">
     <custom-image [image]="image"></custom-image>
+
+    <!-- <abilities-list [abilities]="abilities"></abilities-list> -->
+
+    <mat-card-actions class="volver">
+        <button mat-flat-button color="accent" routerLink="/pokedex" class="w-100">Volver</button>
+    </mat-card-actions>
 </mat-card-content>
-<button mat-flat-button color="accent" routerLink="/pokedex" class="w-100">Volver</button>
