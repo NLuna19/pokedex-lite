@@ -7,10 +7,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { HomeComponent } from '@features/public/pages/home/home.component';
-import { TitleComponent } from '../components/title/title.component';
-import { InlinePokemonInfoComponent } from '@features/components/inline-pokemon-info/inline-pokemon-info.component'
+import { TitleComponent } from '../public/components/title/title.component';
+import { InlinePokemonInfoComponent } from '@features/public/components/inline-pokemon-info/inline-pokemon-info.component';
+import { PokemonComponent } from './pages/pokemon/pokemon.component'
 
-const components = [ PublicComponent, HomeComponent, LoginComponent, PokedexComponent, TitleComponent, InlinePokemonInfoComponent ];
+const components = [ 
+  PublicComponent, 
+  HomeComponent, 
+  LoginComponent, 
+  PokedexComponent, 
+  PokemonComponent, 
+  TitleComponent, 
+  InlinePokemonInfoComponent ];
 const modules = [ CommonModule, PublicRoutingModule, ReactiveFormsModule, SharedModule ];
 
 @NgModule({

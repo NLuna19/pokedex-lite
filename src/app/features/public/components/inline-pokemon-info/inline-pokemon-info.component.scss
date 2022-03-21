@@ -1,15 +1,12 @@
 .grid{
     margin: .5rem 0;
+    max-height: 80vh;
 
     &-container {
         display: grid;
         column-gap: 2px;
         grid-template-columns: 40% 40% 20%;
     }
-}
-
-.header {
-    margin-top: 2vh;
 }
 
 .grid-item {
@@ -24,4 +21,11 @@
 
 a {
     padding: 0;
+}
+
+.cdk-scroll {
+    border-bottom: 1px dotted rgb(191, 191, 191);
+    margin-top: .5vh;
+    min-height: 50vh;
+    width: 100%;
 }

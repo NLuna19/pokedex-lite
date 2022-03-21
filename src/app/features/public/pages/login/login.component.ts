@@ -6,6 +6,7 @@ import { AuthControllerService } from '@core/controllers/auth.controller.service
 import { HttpErrorResponse } from '@angular/common/http';
 import { user } from '@app/core/models/user.models';
 import { getControl as getControlForm} from '@core/util/getControlForm'
+import { AuthStorageService } from '@app/core/services/auth.service';
 
 @Component({
   selector: 'login',
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit {
   constructor( 
     private formBuilder: FormBuilder, 
     private authController: AuthControllerService,
-    private router: Router
+    private router: Router,
+    private authservices: AuthStorageService
   ){ 
     this.formLogin = this.loginForm();  
     this.loginObserver$ = new Observable<user>();
@@ -60,9 +62,15 @@ export class LoginComponent implements OnInit {
       
     }else{
       this.loginObserver$.subscribe({
-        next: (response) => { console.log(response); },
-        error: (error:HttpErrorResponse)=> { console.log(error.statusText) },
-        complete: () => { console.log('COMPLETE'); this.router.navigate(['/home']) }
+        next: (response) => { 
+          this.authservices.login(response);
+        },
+        error: (error:HttpErrorResponse)=> { 
+          console.log(error.statusText) 
+        },
+        complete: () => { 
+          this.router.navigate(['/pokedex']) 
+        }
       })
     }
   }

@@ -18,8 +18,4 @@ export class AuthControllerService implements IAuthService {
         return this.http.post(this.url, body) as Observable<user>;
     }
 
-    _auth(body:login): Observable<user> {
-        return this.http.post(this.url, body) as Observable<user>;
-    }
-
 }
