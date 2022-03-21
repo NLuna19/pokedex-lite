@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from '@core/services/http.service';
-
+ 
 const providers = [ HttpService ];
 const modules = [ HttpClientModule ];
 const components: never[] = [];

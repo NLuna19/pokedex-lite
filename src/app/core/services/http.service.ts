@@ -22,9 +22,8 @@ export class HttpService {
         return this.http.get<T>(_url);
     }
 
-    put<T>(url: string, body: object, id?: number): Observable<T> {
-        const _url = this.router(url, id);
-        return this.http.put<T>(_url, JSON.stringify(body));
+    put<T>(url: string, body: object): Observable<T> {
+        return this.http.put<T>(url, JSON.stringify(body));
     }
 
     post<T>(url: string, body: object): Observable<T> {
