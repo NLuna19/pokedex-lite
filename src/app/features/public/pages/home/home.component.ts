@@ -24,4 +24,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/pokedex']);
   }
 
+  pokemon(){
+    this.router.navigate(['pokedex/pokemon'])
+  }
+
 }

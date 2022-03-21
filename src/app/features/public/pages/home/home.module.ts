@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@features/public/pages/home/home.component';
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
+import { PokemonComponent } from '../pokemon/pokemon.component';
 
 const routes: Routes = [
   {
@@ -20,8 +21,11 @@ const routes: Routes = [
       },
       {
         path: 'pokedex',
-        component: PokedexComponent,
-      }
+        children: [
+          { path: '', component: PokedexComponent },
+          { path: 'pokemon', component: PokemonComponent }
+        ]
+      },
     ],
   }
 ];
@@ -32,6 +36,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
+  exports: [],
   declarations: []
 })
 export class HomeModule { }
