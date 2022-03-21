@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pokemon } from '@core/models/pokemon.models';
 import { PokemonControllerService } from '@app/core/controllers/pokemon.controller.service';
-import { LocalStorageService } from '@app/core/services/local-storage.service';
+import { AuthStorageService } from '@app/core/services/auth.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -15,8 +15,8 @@ export class PokedexComponent implements OnInit {
   public pokemons$: Observable<Pokemon[]> = new Observable<Pokemon[]>();
   public items!: Pokemon[];
 
-  constructor(private pokemonService: PokemonControllerService, private router: Router, private ls: LocalStorageService) {
-    const user = this.ls.getlogin();
+  constructor(private pokemonService: PokemonControllerService, private router: Router, private authservice: AuthStorageService) {
+    const user = this.authservice.getUser();
     this.pokemons$ = this.pokemonService.getByUserId(user.userId as number); 
   }
 
