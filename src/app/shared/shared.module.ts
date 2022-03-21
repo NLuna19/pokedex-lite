@@ -26,7 +26,6 @@ const components = [
   ],
   declarations: [
     ...components,
-
   ]
 })
 export class SharedModule { }

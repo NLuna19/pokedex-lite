@@ -14,8 +14,6 @@ import { TitleComponent } from '../public/components/title/title.component';
 import { InlinePokemonInfoComponent } from '@features/public/components/inline-pokemon-info/inline-pokemon-info.component';
 import { InlineSimpleOneComponent } from '@features/public/components/inline-simple-one/inline-simple-one.component'
 import { AbilitiesListComponent } from '@features/public/components/abilities-list/abilities-list.component';
-import { InputChipsComponent } from './components/input-chips/input-chips.component';
-
 
 const components = [ 
   PublicComponent, 
@@ -29,7 +27,7 @@ const components = [
   InlinePokemonInfoComponent,
   InlineSimpleOneComponent,
   AbilitiesListComponent,
-  InputChipsComponent,
+  
 ];
 const modules = [ 
   CommonModule, 
