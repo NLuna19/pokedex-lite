@@ -63,11 +63,14 @@ export class LoginComponent implements OnInit {
     }else{
       this.loginObserver$.subscribe({
         next: (response) => { 
-          console.log(response);
           this.authservices.login(response);
         },
-        error: (error:HttpErrorResponse)=> { console.log(error.statusText) },
-        complete: () => { console.log('COMPLETE'); this.router.navigate(['/pokedex']) }
+        error: (error:HttpErrorResponse)=> { 
+          console.log(error.statusText) 
+        },
+        complete: () => { 
+          this.router.navigate(['/pokedex']) 
+        }
       })
     }
   }
