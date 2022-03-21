@@ -1,5 +1,6 @@
 .grid{
     margin: .5rem 0;
+    max-height: 80vh;
 
     &-container {
         display: grid;
@@ -24,4 +25,14 @@
 
 a {
     padding: 0;
+}
+
+.cdk-scroll {
+    min-height: 50vh;
+    width: 100%;
+}
+
+.chip-flex{
+    display: inline-flex;
+    margin-left: 2px;
 }
