@@ -15,7 +15,6 @@ import { InlinePokemonInfoComponent } from '@features/public/components/inline-p
 import { InlineSimpleOneComponent } from '@features/public/components/inline-simple-one/inline-simple-one.component'
 import { AbilitiesListComponent } from '@features/public/components/abilities-list/abilities-list.component';
 
-
 const components = [ 
   PublicComponent, 
   HomeComponent, 
