@@ -10,12 +10,8 @@
         <a mat-button color="primary" class="w-100" (click)="emitSelect(item.id)">
             <mat-card class="grid-container">
                 <div class="grid-item" > 
-                    <mat-chip-list class="chip-flex" aria-label="selection" 
-                    *ngFor=" let type of item?.type">
-                        <mat-chip>{{type}}</mat-chip>
-                    </mat-chip-list>
+                    <inline-chip [items]="item?.type"></inline-chip>
                 </div>
-
                 <div class="grid-item"> {{item?.name}} </div>
                 <div class="grid-item"> {{item?.lvl}} </div>
             </mat-card>

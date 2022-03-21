@@ -9,10 +9,6 @@
     }
 }
 
-.header {
-    margin-top: 2vh;
-}
-
 .grid-item {
     text-align: start;
     align-content: center;
@@ -28,11 +24,8 @@ a {
 }
 
 .cdk-scroll {
+    border-bottom: 1px dotted rgb(191, 191, 191);
+    margin-top: .5vh;
     min-height: 50vh;
     width: 100%;
-}
-
-.chip-flex{
-    display: inline-flex;
-    margin-left: 2px;
 }
