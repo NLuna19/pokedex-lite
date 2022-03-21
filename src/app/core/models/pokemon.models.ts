@@ -3,7 +3,7 @@ export interface Pokemons {
 }
 
 export interface Pokemon {
-    id: number,
+    id?: number,
     name: string,
     lvl: number | null,
     evolutionId: number,
