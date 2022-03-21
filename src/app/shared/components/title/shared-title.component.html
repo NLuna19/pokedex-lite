@@ -1,10 +1,10 @@
-<mat-card-title class="title">
-    <p>{{title}}</p>
+<mat-toolbar color="primary" class="title">
 
-    <button *ngIf="!logged" mat-flat-button color="primary" (click)="login()" >Login</button>
-    <button *ngIf="logged" mat-flat-button color="accent" (click)="logout()" >Logout</button>
-    
-</mat-card-title>
+    <span>{{title}}</span>
 
-<mat-divider ></mat-divider>
-<div class="divider"></div>
+    <button *ngIf="!logged" mat-raised-button color="primary" (click)="login()" >Login</button>
+    <button *ngIf="logged" mat-raised-button color="warn" (click)="logout()" >Logout</button>
+
+</mat-toolbar>
+
+<div class="divider"></div> 

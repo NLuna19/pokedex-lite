@@ -1,0 +1,51 @@
+
+<mat-card-content class="card-login-content">
+    <form (ngSubmit)="submit()" [formGroup]="formLogin" >
+    
+        <mat-form-field class="w-100" appearance="outline">
+            <mat-label>Types</mat-label>
+            <mat-chip-list #chipList aria-label="Type selection">
+              <mat-chip *ngFor="let type of types" (removed)="remove(type)">
+                {{type}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input placeholder="New type..."
+                formControlName="types"
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-login">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name"
+                placeholder="- - -" type="text" id="name" 
+                name="name" required
+            />
+            <mat-error *ngIf="controlForm('name')?.invalid">{{requiredError()}}</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="input-login">
+            <mat-label>Level</mat-label>
+            <input matInput formControlName="level" min="1" max='10' pattern="^[1-9]+"
+                placeholder="1" type="number" id="level" 
+                name="level" required
+            />
+            <mat-error *ngIf="controlForm('level')?.invalid">{{requiredError()}}</mat-error>
+        </mat-form-field>
+
+
+        
+        <button mat-raised-button color="primary" class="btn" type="submit">Agregar</button>
+        <button mat-raised-button color="" routerLink="/pokedex" class="btn">Volver</button>
+        
+    </form>
+</mat-card-content>
+
+
+
+

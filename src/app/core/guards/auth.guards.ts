@@ -11,11 +11,13 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): Observable<boolean> | boolean {
     let login = this.authservice.getUser();
-    if ( login.userId != '' ) {
+    if ( login.userId != '' && login.userId != undefined) {      
       return true;
     }
     else{
+      this.router.navigate(['/home']);
       return false;
+
     }
   }
 

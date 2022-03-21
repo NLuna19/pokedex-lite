@@ -1,0 +1,21 @@
+.grid{
+    margin: .5rem 0;
+    max-height: 80vh;
+    filter: drop-shadow(0 0 2px gray );
+    display: grid;
+    column-gap: 0px;
+    grid-template-columns: 40% 40% 20%;
+
+}
+
+.grid-item {
+    padding: 0;
+    text-align: start;
+    align-content: center;
+    font-weight: bold;
+}
+
+.tag{
+    display: block;
+    margin-top: 2vh;
+}

@@ -1,0 +1,12 @@
+<header-info></header-info>
+<inline-simple-one [item]="header"> </inline-simple-one>
+
+<mat-card-content class="pokemon">
+    <custom-image [image]="image"></custom-image>
+
+    <abilities-list [abilities]="abilities"></abilities-list>
+
+    <mat-card-actions class="volver">
+        <button mat-raised-button color="" routerLink="/pokedex" class="w-100">Volver</button>
+    </mat-card-actions>
+</mat-card-content>

@@ -1,6 +1,7 @@
 .grid{
     margin: .5rem 0;
     max-height: 80vh;
+    filter: drop-shadow(0 0 2px gray );
 
     &-container {
         display: grid;
@@ -9,14 +10,11 @@
     }
 }
 
-.grid-item {
+.grid-item-header {
     text-align: start;
     align-content: center;
     padding: 0;
-
-    &-header {
-        font-weight: bold;
-    }
+    font-weight: bold;
 }
 
 a {
@@ -25,7 +23,6 @@ a {
 
 .cdk-scroll {
     border-bottom: 1px dotted rgb(191, 191, 191);
-    margin-top: .5vh;
-    min-height: 50vh;
+    min-height: 65vh;
     width: 100%;
 }

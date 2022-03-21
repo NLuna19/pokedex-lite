@@ -1,4 +1,3 @@
-import { Router } from '@angular/router';
 import { Pokemon } from '@core/models/pokemon.models';
 import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy} from '@angular/core';
 @Component({
@@ -9,15 +8,15 @@ import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy
 })
 export class InlinePokemonInfoComponent implements OnInit {
   @Input() data?: Pokemon[];
-  @Output() selectPokemon = new EventEmitter<number>();
+  @Output() selectPokemon = new EventEmitter<Pokemon>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  emitSelect(id: number){
-    this.selectPokemon.emit(id);
+  emitSelect(pokemon: Pokemon){
+    this.selectPokemon.emit(pokemon);
   }
 
 }

@@ -10,6 +10,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 const modules = [ 
   MatCardModule, 
@@ -22,6 +24,9 @@ const modules = [
   MatTableModule,
   ScrollingModule,
   MatChipsModule,
+  MatToolbarModule,
+  MatIconModule,
+
 ]
 
 @NgModule({

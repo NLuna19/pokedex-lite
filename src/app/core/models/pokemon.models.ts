@@ -3,16 +3,21 @@ export interface Pokemons {
 }
 
 export interface Pokemon {
-    id: number,
+    id?: number,
     name: string,
-    lvl: number,
+    lvl: number | null,
     evolutionId: number,
     abilities: Pokemon_abilities[],
     type: string[],
-    image: string,
+    image?: string,
 }
 
 export interface Pokemon_abilities {
     name: string,
     description: string,
+}
+
+export interface post_Pokemon{
+    pokemon: Pokemon,
+    userId: string,
 }

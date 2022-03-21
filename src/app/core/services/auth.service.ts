@@ -18,9 +18,9 @@ export class AuthStorageService {
 
   getUser():user {
     let ret:user ={
-      userId: localStorage.getItem(this._userId) || '',
-      username: localStorage.getItem(this._name) || '',
-    }    
+      userId: localStorage.getItem(this._userId) || undefined,
+      username: localStorage.getItem(this._name) || undefined,
+    }
     return ret;
   }
 

@@ -7,9 +7,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { HomeComponent } from '@features/public/pages/home/home.component';
+import { PokemonComponent } from './pages/pokedex/pokemon/pokemon.component';
+import { CreateComponent } from './pages/pokedex/create/create.component';
+import { UpdateComponent } from './pages/pokedex/update/update.component';
 import { TitleComponent } from '../public/components/title/title.component';
 import { InlinePokemonInfoComponent } from '@features/public/components/inline-pokemon-info/inline-pokemon-info.component';
-import { PokemonComponent } from './pages/pokemon/pokemon.component'
+import { InlineSimpleOneComponent } from '@features/public/components/inline-simple-one/inline-simple-one.component'
+import { AbilitiesListComponent } from '@features/public/components/abilities-list/abilities-list.component';
+import { InputChipsComponent } from './components/input-chips/input-chips.component';
+
 
 const components = [ 
   PublicComponent, 
@@ -17,9 +23,20 @@ const components = [
   LoginComponent, 
   PokedexComponent, 
   PokemonComponent, 
+  CreateComponent, 
+  UpdateComponent,
   TitleComponent, 
-  InlinePokemonInfoComponent ];
-const modules = [ CommonModule, PublicRoutingModule, ReactiveFormsModule, SharedModule ];
+  InlinePokemonInfoComponent,
+  InlineSimpleOneComponent,
+  AbilitiesListComponent,
+  InputChipsComponent,
+];
+const modules = [ 
+  CommonModule, 
+  PublicRoutingModule, 
+  ReactiveFormsModule, 
+  SharedModule,
+];
 
 @NgModule({
   providers: [],

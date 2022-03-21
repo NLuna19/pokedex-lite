@@ -13,10 +13,12 @@ export class SharedTitleComponent implements OnInit {
   
   @Input() title!: string;
   public loggedObservable:Observable<boolean>;
-  public logged:boolean = false
+  public logged?:boolean
 
   constructor(private authservice:AuthStorageService, private router:Router) { 
+    this.authservice.getUser();
     this.loggedObservable = authservice.isLogged();
+
   }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class SharedTitleComponent implements OnInit {
   }
 
   logout(){
-    this.authservice.logout();
+    this.authservice.logout();    
   }
 
   login(){
