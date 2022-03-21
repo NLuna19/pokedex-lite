@@ -18,3 +18,12 @@ body {
     min-height: 90vh;
 }
 
+.easyout6 {
+    transition: 0.6s ease-out 0.1s;
+}
+
+.setoff{
+    border: 2px solid white;
+    background-color: lightgrey;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
