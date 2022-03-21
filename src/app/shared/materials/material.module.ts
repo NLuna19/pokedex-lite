@@ -8,6 +8,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatChipsModule } from '@angular/material/chips';
 
 const modules = [ 
   MatCardModule, 
@@ -18,6 +20,8 @@ const modules = [
   MatListModule,
   MatGridListModule,
   MatTableModule,
+  ScrollingModule,
+  MatChipsModule,
 ]
 
 @NgModule({

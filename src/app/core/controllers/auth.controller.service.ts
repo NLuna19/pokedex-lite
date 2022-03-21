@@ -1,3 +1,4 @@
+import { LocalStorageService } from './../services/local-storage.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -15,10 +16,6 @@ export class AuthControllerService implements IAuthService {
     constructor(private http:HttpClient) { }
 
     auth(body:login): Observable<user> {
-        return this.http.post(this.url, body) as Observable<user>;
-    }
-
-    _auth(body:login): Observable<user> {
         return this.http.post(this.url, body) as Observable<user>;
     }
 
