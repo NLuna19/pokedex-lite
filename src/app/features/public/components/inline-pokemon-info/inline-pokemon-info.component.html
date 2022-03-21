@@ -7,14 +7,8 @@
 <cdk-virtual-scroll-viewport itemSize="50" class="cdk-scroll">
     <div class="grid" *cdkVirtualFor="let item of data">
 
-        <a mat-button color="primary" class="w-100" (click)="emitSelect(item.id)">
-            <mat-card class="grid-container">
-                <div class="grid-item" > 
-                    <inline-chip [items]="item?.type"></inline-chip>
-                </div>
-                <div class="grid-item"> {{item?.name}} </div>
-                <div class="grid-item"> {{item?.lvl}} </div>
-            </mat-card>
+        <a mat-button color="primary" class="w-100" (click)="emitSelect(item)">
+            <inline-simple-one [item]="item"></inline-simple-one>
         </a>
 
     </div>

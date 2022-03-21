@@ -1,0 +1,10 @@
+<mat-card class="grid-container" *ngIf="item != null">
+    <div class="grid-item" > 
+        <inline-chip [items]="item?.type"></inline-chip>
+    </div>
+    <div class="grid-item"> {{item?.name}} </div>
+    <div class="grid-item"> {{item?.lvl}} </div>
+</mat-card>
+
+<mat-card class="grid-container" *ngIf="item == null">
+</mat-card>
