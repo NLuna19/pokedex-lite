@@ -1,3 +1,4 @@
+import { AuthStorageService } from '@app/core/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicComponent implements OnInit {
 
-  constructor() { 
-    
+  constructor(private auth:AuthStorageService) { 
+    this.auth.getUser()
   }
 
   ngOnInit() {

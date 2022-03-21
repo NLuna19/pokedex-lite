@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@features/public/pages/home/home.component';
 import { LoginComponent } from '@features/public/pages/login/login.component';
 import { PokedexComponent } from '@features/public/pages/pokedex/pokedex.component';
-import { PokemonComponent } from '../pokemon/pokemon.component';
+import { PokemonComponent } from '../pokedex/pokemon/pokemon.component';
 
 const routes: Routes = [
   {

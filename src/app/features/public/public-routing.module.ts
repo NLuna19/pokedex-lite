@@ -5,7 +5,7 @@ import { PublicComponent } from './public.component'
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PokedexComponent } from './pages/pokedex/pokedex.component';
-import { PokemonComponent } from './pages/pokemon/pokemon.component';
+import { PokemonComponent } from './pages/pokedex/pokemon/pokemon.component';
 import { AuthGuard } from '@core/guards/auth.guards';
 
 const routes: Routes = [

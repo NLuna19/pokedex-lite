@@ -20,7 +20,10 @@ export class AuthStorageService {
     let ret:user ={
       userId: localStorage.getItem(this._userId)+'',
       username: localStorage.getItem(this._name)+'',
-    }    
+    }
+    if(ret.userId){
+      this.loggedObservable.next(true)
+    }
     return ret;
   }
 
