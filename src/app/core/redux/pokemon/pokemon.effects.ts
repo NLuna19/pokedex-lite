@@ -13,8 +13,6 @@ export class PokemonEffects {
       ofType(pokemonAction.getAllPokemons),
       mergeMap((action) => {  
         return this.pokemonService.getByUserId(action.id).pipe(
-          tap(()=> console.log('effect'),
-          ),
           map( response => pokemonAction.GetAllPokemons_Success( {
             pokemons: response
           })),

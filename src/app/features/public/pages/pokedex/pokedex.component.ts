@@ -21,13 +21,11 @@ export class PokedexComponent implements OnInit {
   public user: user;
 
   constructor(
-    private pokemonService: PokemonControllerService, 
     private router: Router,
     private authservice: AuthStorageService,
     private store: Store<{pokemonState: pokemonState}>,
   ) {
     this.user = this.authservice.getUser();
-    // this.pokemons$ = this.pokemonService.getByUserId(user.userId+''); 
   }
 
   ngOnInit(): void {    
@@ -43,8 +41,9 @@ export class PokedexComponent implements OnInit {
     })
   }
 
-  select(id:number){
-    console.log('in pokedex: ', id);    
+  select(pokemon: Pokemon){
+    console.log('in pokedex: ', pokemon.id);    
+    this.store.dispatch(PokemonActions.getOnePokemon({pokemon: pokemon}))
     this.router.navigate(['pokedex/pokemon'])
   }
 

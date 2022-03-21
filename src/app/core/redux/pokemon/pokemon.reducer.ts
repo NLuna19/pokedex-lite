@@ -3,7 +3,7 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { pokemonState } from '@app/core/models/pokemons-state.models';
 import { Pokemon } from '@app/core/models/pokemon.models';
 
-const emptyPokemon: Pokemon =  { id: 0, name: '', lvl: 0, evolutionId: 0, abilities: [], type: [], image: '' };
+const emptyPokemon: Pokemon =  { id: 0, name: '', lvl: null, evolutionId: 0, abilities: [], type: [], image: '' };
 const errorEmpty = { };
 
 const initialState: pokemonState = {

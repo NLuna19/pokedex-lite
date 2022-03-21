@@ -5,7 +5,7 @@ export interface Pokemons {
 export interface Pokemon {
     id: number,
     name: string,
-    lvl: number,
+    lvl: number | null,
     evolutionId: number,
     abilities: Pokemon_abilities[],
     type: string[],
